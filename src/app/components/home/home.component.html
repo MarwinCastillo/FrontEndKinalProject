@@ -1,0 +1,40 @@
+<div class="card borde-primary mt-3">
+  <div class="card-header">
+    Clases
+  </div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de Clases</h5>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Descripción</th>
+          <th>Ciclo</th>
+          <th>Cupo Máximo</th>
+          <th>Cupo Mínimo</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of clases; let i = index">
+        <tr>
+          <td>{{i+1}}</td>
+          <td>{{item.descripcion}}</td>
+          <td>{{item.ciclo}}</td>
+          <td>{{item.cupoMaximo}}</td>
+          <td>{{item.cupoMinimo}}</td>
+          <td>
+            <button [routerLink]="['/asignacionesPorAlumno/form',item.claseId]" type="button" name="asignacion" 
+            class="btn btn-primary btn-sm">Asignacion</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!--<div class="jumbotron jumbotron-fluid ">
+    <div class="container ">
+      <h1 class="display-4">KALUM</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, beatae illo ab consequuntur non voluptas cumque dolor perferendis blanditiis iusto enim qui doloremque delectus laudantium dicta saepe cupiditate facere atque.</p>
+    </div>
+  </div>-->
